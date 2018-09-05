@@ -14,7 +14,7 @@ import vuePicturePreview from 'vue-picture-preview'
 Vue.use(vuePicturePreview)
 // axios配置
 axios.defaults.baseURL = 'http://47.95.210.82/chat/'
-axios.defaults.withCredentials = true
+// axios.defaults.baseURL = 'http://localhost:8080/chat/'
 
 Vue.use(MuseUI)
 Vue.prototype.$axios = axios

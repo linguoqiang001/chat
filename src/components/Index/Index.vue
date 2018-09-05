@@ -54,7 +54,7 @@
           </mu-list-item-action>
           <mu-list-item-title>个性装扮</mu-list-item-title>
         </mu-list-item>
-        <mu-list-item button to="/">
+        <mu-list-item button @click="exit">
           <mu-list-item-action>
             <mu-icon value="exit_to_app"></mu-icon>
           </mu-list-item-action>
@@ -91,6 +91,12 @@ export default {
       this.$router.push({
         name: 'Add'
       })
+    },
+    exit () {
+      this.websocket.close()
+      this.websocket.onclose = () => {
+        this.$router.replace({name: 'Login'})
+      }
     }
   }
 }

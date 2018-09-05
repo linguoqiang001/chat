@@ -62,9 +62,9 @@ const mutations = {
   }
 }
 const actions = {
-  setFriends: async ({commit}, that) => {
+  setFriends: async ({commit, state}, that) => {
     let friends = []
-    await that.$axios.get('friend/list')
+    await that.$axios.get('friend/list', {params: {userId: state.userInfo.userId}})
       .then(res => {
         friends = res.data
       })

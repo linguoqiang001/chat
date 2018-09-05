@@ -32,7 +32,10 @@ export default {
     ...mapMutations(['addFriend']),
     send () {
       this.$axios.get('friend/addFriend', {
-        params: {friendId: this.personIndex.userId}
+        params: {
+          friendId: this.personIndex.userId,
+          userId: this.userInfo.userId
+        }
       }).then(res => {
         if (res.data === 1) {
           this.$router.back()

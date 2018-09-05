@@ -82,8 +82,11 @@ export default {
     // webSocket配置
     webSocketConfig () {
       if ('WebSocket' in window) {
-        this.websocket = new WebSocket('ws://47.95.210.82/chat/websocket/socketServer')
+        this.websocket = new WebSocket('ws://47.95.210.82/chat/websocket/socketServer?userId=' + this.userId)
         this.setWebsocket(this.websocket)
+      }
+      this.websocket.onclose = () => {
+        console.log('close')
       }
       // 接受服务器转发过来的消息
       this.websocket.onmessage = evt => {

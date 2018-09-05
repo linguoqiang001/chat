@@ -56,7 +56,7 @@ gif有些失真，看官可以clone后本地查看。
 - 项目暂不支持聊天记录缓存，一旦你退出系统，聊天记录将清空
 
 - 这是我使用vue做的第二个webapp，虽然还是不怎么样，有兴趣的可以去看下我的第一个webapp——医院管理信息系统
-  项目地址 `https://github.com/linguoqiang001/his`
+  项目地址 <a href="https://github.com/linguoqiang001/his">https://github.com/linguoqiang001/his</a>
 
 - 最近比较忙，暂时就做到这，后面有时间的话会继续完善项目，后台和数据库部分，有时间我整理下一并上传
 

@@ -10,7 +10,7 @@
     <div class="footer" ref="footer">
       <div class="footer-top">
         <input type="text" v-model="value" ref="input">
-        <button :class="[send,isEmpty]" @click="sendMessage">发送</button>
+        <button :class="[send, isEmpty]" @click="sendMessage">发送</button>
       </div>
       <div class="footer-bottom">
         <mu-icon value="mic"></mu-icon>
@@ -46,7 +46,6 @@ export default {
     this.$nextTick(function () {
       this.$refs.end.scrollIntoView(true)
     })
-    console.log(this.$store.state.friends)
   },
   computed: {
     friend () {
@@ -126,38 +125,39 @@ export default {
 <style lang="less" scoped>
 @import '~static/less/init';
 
-.wrap{
+.wrap {
   width: 100vw;
   height: 100vh;
   background: #F1F2F7;
 }
-.content{
+.content {
   box-sizing:border-box;
   background:#F1F2F7;
   padding: 0 @_10 @_10 @_10;
   overflow: scroll;
   height: calc(~"100% - 6rem");
 }
-.footer{
+.footer {
   position: fixed;
   bottom: 0;
   background:#F1F2F7;
   width: 100%;
   height: @_70;
-  .footer-top{
+  .footer-top {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    input{
+    input {
       width: 75vw;
       height: @_30;
       border-radius: 5px;
       border: none;
       outline:none;
     }
-    .send{
+    .send {
       width: 20vw;
       border:none;
+      height: @_30;
       background: #2196F3;
       color: white;
       padding: @_7 @_2;
@@ -169,7 +169,7 @@ export default {
       background: #DDDEE2;
     }
   }
-  .footer-bottom{
+  .footer-bottom {
     display: flex;
     justify-content: space-around;
     .mu-icon{
